@@ -1,9 +1,11 @@
 .Square {
+    float: left;   
     margin: 20px;
     margin-right: 0;
 }
 
 .SquareControls{
+    float: left;
     margin-top: 20px;
     margin-left: 20px;
     text-align: left;
