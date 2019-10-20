@@ -1,15 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Square from './Square'
+import React from 'react'
+import Container from './Container'
 
-class App extends React.Component {
+export default class App extends React.Component {
   render() {
-    return (
+    return(
       <div>
-        <Square size={200} color='blue' />
+        <Container>
+          <p>Hello World</p>
+          <div><p>Hai, Bianca Belinda</p></div>
+        </Container>  
       </div>
     )
   }
 }
-export default App
