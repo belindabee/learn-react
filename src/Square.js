@@ -15,9 +15,10 @@ export default class Square extends React.Component {
 
     updateCoords (e) {
         const { clientX, clientY} = e
+        const { top, left } = this.squareRef.getBoundingClientRect()
         this.setState({
-            x: clientX,
-            y: clientY
+            x: clientX - left,
+            y: clientY - top
         })
     }
 
@@ -29,10 +30,10 @@ export default class Square extends React.Component {
             height: size,
             backgroundColor: this.props.initialColor,
         }
-        const { x, y } = this.state
+        // const { x, y } = this.state
         return (
             <div className='SquareContainer'>
-                <div style={style} className='Square' onMouseMove={(e) => this.updateCoords(e)}>
+                <div ref={(e) => this.squareRef = e} style={style} className='Square' onMouseMove={(e) => this.updateCoords(e)}>
                     <div>{ `${this.state.x}, ${this.state.y}` }</div>
                 </div>
             </div>
