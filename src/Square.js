@@ -22,6 +22,13 @@ export default class Square extends React.Component {
         })
     }
 
+    reset() {
+        this.setState({
+            x: 0,
+            y: 0
+        })
+    }
+
     render () {
         let textInput;
         const size = `${this.props.size}px`
@@ -33,7 +40,13 @@ export default class Square extends React.Component {
         // const { x, y } = this.state
         return (
             <div className='SquareContainer'>
-                <div ref={(e) => this.squareRef = e} style={style} className='Square' onMouseMove={(e) => this.updateCoords(e)}>
+                <div
+                 ref={(e) => this.squareRef = e}
+                  style={style} 
+                  className='Square' 
+                  onMouseMove={(e) => this.updateCoords(e)}
+                  onMouseOut={() => this.reset()}
+                  >
                     <div>{ `${this.state.x}, ${this.state.y}` }</div>
                 </div>
             </div>
