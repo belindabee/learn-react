@@ -16,23 +16,25 @@ export default class index extends React.Component {
         })
     }
     renderItem() {
-        const { items } = this.props
+        const { item } = this.props
         const { selectedItem } = this.state
-        return items.map((item, i) =>
+        return item ? item.map((item, i) =>
         <EnchancedCheckbox 
             label={item.label}
             value={item.value}
+
             id={item.id}
             selected={selectedItem === i}
             onChange={() => this.setSelected(i)}
         />
-        )    
+        )   
     }
+    
 
 
     render () {
         return (
-            <div class='enchanched-checkbox-group-container'>
+            <div className='enhanched-checkbox-group-container'>
                 {this.renderItem()}
             </div>
         )

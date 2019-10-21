@@ -4,7 +4,7 @@ import propTypes from 'prop-types'
 export default function EnchancedCheckbox ({ label, value, selected, id, onChange }) {
     const selectedClass = (
         selected
-        ? ' enhached-checbox-container-selected'
+        ? ' enhanched-checkbox-container-selected'
         : ''
     )
 const className = `enhanched-checkbox-container${selectedClass}`
