@@ -70,6 +70,6 @@ constructor(props) {
         </div>
       </div>
     )
-    
+
   }
 }

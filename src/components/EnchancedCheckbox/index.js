@@ -7,10 +7,10 @@ export default function EnchancedCheckbox ({ label, value, selected, id, onChang
         ? ' enhanced-checkbox-container-selected'
         : ''
     )
-const className = `enhanced-checkbox-container${selectedClass}`
+const className = `enhanced-checkbox-container ${selectedClass}`
     return (
         <div className={className} onClick={() => onChange()}>
-            <input 
+            <input
                 type='checkbox'
                 value={value}
                 id={id}
