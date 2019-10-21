@@ -4,10 +4,10 @@ import propTypes from 'prop-types'
 export default function EnchancedCheckbox ({ label, value, selected, id, onChange }) {
     const selectedClass = (
         selected
-        ? ' enhanched-checkbox-container-selected'
+        ? ' enhanced-checkbox-container-selected'
         : ''
     )
-const className = `enhanched-checkbox-container${selectedClass}`
+const className = `enhanced-checkbox-container${selectedClass}`
     return (
         <div className={className} onClick={() => onChange()}>
             <input 

@@ -57,15 +57,15 @@ constructor(props) {
         <div className='container'>
           <div>
             <h3>Main</h3>
-            <EnchacedCheckboxGroup item={main} />
+            <EnchacedCheckboxGroup item={mains} onChange={(value) => this.itemSelected({ main: value })} />
           </div>
           <div>
             <h3>Side 1</h3>
-            <EnchacedCheckboxGroup item={side1s} />
+            <EnchacedCheckboxGroup item={side1s} onChange={(value) => this.itemSelected({ side1: value })} />
           </div>
           <div>
             <h3>side 2</h3>
-            <EnchacedCheckboxGroup item={side2s} />
+            <EnchacedCheckboxGroup item={side2s} onChange={(value) => this.itemSelected({ side2: value })} />
           </div>
         </div>
       </div>

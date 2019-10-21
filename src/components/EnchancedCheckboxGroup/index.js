@@ -1,5 +1,6 @@
 import React from 'react'
 import EnchancedCheckbox from '../EnchancedCheckbox'
+import PropTypes from 'prop-types'
 
 
 export default class index extends React.Component {
@@ -14,15 +15,15 @@ export default class index extends React.Component {
         this.setState({
             selectedItem
         })
+        this.props.onChange(this.props.item[selectedItem].value)
     }
     renderItem() {
-        const { item } = this.props
+        const { items } = this.props
         const { selectedItem } = this.state
-        return item ? item.map((item, i) =>
+        return items.map((item, i) =>
         <EnchancedCheckbox 
             label={item.label}
             value={item.value}
-
             id={item.id}
             selected={selectedItem === i}
             onChange={() => this.setSelected(i)}
@@ -34,9 +35,18 @@ export default class index extends React.Component {
 
     render () {
         return (
-            <div className='enhanched-checkbox-group-container'>
+            <div className='enhanced-checkbox-group-container'>
                 {this.renderItem()}
             </div>
         )
     }
+}
+
+EnchancedCheckboxGroup.propTypes = {
+    items: PropTypes.array,
+    onChange: PropTypes.func.isRequired
+}
+
+EnchancedCheckboxGroup.defaultProps = {
+    items: []
 }
