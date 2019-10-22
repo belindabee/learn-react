@@ -15,9 +15,8 @@ const className = `enhanced-checkbox-container ${selectedClass}`
                 value={value}
                 id={id}
                 checked={selected}
-                onChange={() => onChange()}
             />
-            <label htmlFor={id}>{label}</label>
+            <label>{label}</label>
         </div>
     )
 }

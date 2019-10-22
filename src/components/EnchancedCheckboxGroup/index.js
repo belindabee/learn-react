@@ -23,11 +23,12 @@ export default class EnchancedCheckboxGroup extends React.Component {
         console.log(item)
         return item.map((item, i) =>
         <EnchancedCheckbox
+            key={item.value}
             label={item.label}
             value={item.value}
             id={item.id}
             selected={selectedItem === i}
-            onChange={() => this.setSelected(i)}
+            onChange={() =>{ console.log('CHANGE'); this.setSelected(i)}}
         />
         )
     }
