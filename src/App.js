@@ -10,7 +10,7 @@ constructor(props) {
       main: undefined,
       side1: undefined,
       side2: undefined,
-      showSelection: false,
+      showSelection: false, 
       isDoublePortion: false
     }
   }
