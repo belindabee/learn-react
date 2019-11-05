@@ -9,7 +9,7 @@ import Proptypes from 'prop-types'
     constructor (props) {
         super(props)
         this.state = {
-            currency: 'GBP'
+            currency: 'rupiah'
         }
     }
 

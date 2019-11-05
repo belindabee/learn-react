@@ -1,5 +1,4 @@
-import React from 'react'
-import PropTypes from 'props-types'
+import React from 'react' 
 import { getCurrencySymbol, convertCurrency } from '../currency'
 
 class Product extends React.Component {
@@ -9,7 +8,7 @@ class Product extends React.Component {
         return (
             <div>
                 <h3>{title}</h3>
-                <img src='/placeholder.jpg' />
+                <img src='/placeholder.jpg' alt='img' />
                 <div>
                     <div>{getCurrencySymbol(currency)}{convertCurrency(price, currency)}</div>
                     <button>Add to cart</button>
@@ -21,6 +20,3 @@ class Product extends React.Component {
 }
 export default Product
 
-Product.contextTypes = {
-    currency: PropTypes
-}
