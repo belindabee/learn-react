@@ -2,26 +2,8 @@ import React from 'react'
 import Header from './Header'
 import SideBar from './SideBar'
 import MainContent from './MainContent'
-import Proptypes from 'prop-types'
 
- class Page extends React.Component {
-
-    constructor (props) {
-        super(props)
-        this.state = {
-            currency: 'rupiah'
-        }
-    }
-
-    getChildContext () {
-        return {
-            currency: this.state.currency,
-            setCurrency: (currency) => {
-                this.setState({currency})
-            }
-        }
-    }
-
+ class Page extends React.Component { 
     render() {
         return (
             <div clasName='page'>
@@ -37,7 +19,4 @@ import Proptypes from 'prop-types'
 
 export default Page
 
-Page.ChildContexType = {
-    currency: Proptypes.string,
-    setCurrency: Proptypes.fuc
-}
+
