@@ -5,7 +5,8 @@ export default class CurrencySlelector extends React.Component {
     
     valueChhanged (e) {
         const target = e.nativeEvent.target
-        const newCurrency = target.options[target.selecteedIndex].value
+        const newCurrency = target.options[target.selectedIndex].value
+        this.context.setCurrency(newCurrency)
     }
 
     render() {
@@ -23,4 +24,5 @@ export default class CurrencySlelector extends React.Component {
 
 CurrencySlelector.contextTypes = {
     currency: PropTypes.string,
+    setCurrency: PropTypes.func,
 }
