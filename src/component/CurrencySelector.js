@@ -1,28 +1,27 @@
 import React from'react'
 import PropTypes from 'prop-types'
 
-export default class CurrencySlelector extends React.Component {
+export default class CurrencySelector extends React.Component {
     
     valueChhanged (e) {
         const target = e.nativeEvent.target
-        const newCurrency = target.options[target.selectedIndex].value
-        this.context.setCurrency(newCurrency)
+        this.props.currencyChanged(target[target.selectedIndex].value)
     }
 
     render() {
-        const { currency } = this.context
+        const { currency } = this.props
         return(
             <div>
-                <seect defaultValue={currency} onChange={(e) => this.valueChange(e)}>
+                <select defaultValue={currency} onChange={(e) => this.valueChange(e)}>
                     <option value='rupiah'>Rp</option>
                     <option value='usd'>Dollars</option>
-                </seect>
+                </select>
             </div>
         )
     }
 }
 
-CurrencySlelector.contextTypes = {
+CurrencySelector.PropTypes = {
     currency: PropTypes.string,
-    setCurrency: PropTypes.func,
+    currencyChanged: PropTypes.func,
 }
