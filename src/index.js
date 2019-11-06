@@ -7,7 +7,7 @@ import { createStore, applyMiddleware } from 'redux'
 import { createLogger } from 'redux-logger'
 import { Provider } from 'react-redux'
 import reducer from 'reducers'
-import { createFileCoverage } from 'istanbul-lib-coverage';
+
 
 const store = createStore(
     reducer,
