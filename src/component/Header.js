@@ -1,6 +1,6 @@
 import React from 'react'
-import Basket from './Basket'
-import CurrencySelector from './CurrencySelector'
+import Basket from './BasketContainer'
+import CurrencySelector from './CurrencySelectorContainer'
 
 export default () => {
     <div className='header'>
