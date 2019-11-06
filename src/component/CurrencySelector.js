@@ -21,7 +21,7 @@ export default class CurrencySelector extends React.Component {
     }
 }
 
-CurrencySelector.PropTypes = {
+CurrencySelector.propTypes = {
     currency: PropTypes.string,
     currencyChanged: PropTypes.func,
 }

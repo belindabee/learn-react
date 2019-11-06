@@ -1,5 +1,5 @@
 import React from 'react'
-import ProducListing from './ProductListingContainer'
+import ProductListing from './ProductListingContainer'
 
 export default () => {
     <div className='main-content'>

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import CurrencySelector from './CurrencySelector'
-import { currencyChanged } from './actions'
+import { currencyChanged } from '../actions'
 
 function mapStateProps (state) {
     return{
