@@ -4,8 +4,7 @@ import { getCurrencySymbol, convertCurrency } from '../currency'
 
 export default class Basket extends React.Component {
     render() {
-        const {items, total} = this,props;
-        const { currency } = this.context
+        const { items, total, currency } = this.props;
         return (
             <div>
                 {items} item | { getCurrencySymbol(currency)}{convertCurrency(total, currency)}
