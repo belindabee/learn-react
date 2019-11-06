@@ -1,9 +1,10 @@
 import React from 'react' 
 import { getCurrencySymbol, convertCurrency } from '../currency'
+import PropTypes from 'prop-types'
 
-class Product extends React.Component {
-    render () {
-        const { title,price } = this.this.props
+export default class Product extends React.Component {
+    render() {
+        const { title, price } = this.props
         const { currency } = this.context
         return (
             <div>
@@ -18,5 +19,11 @@ class Product extends React.Component {
         )
     }
 }
-export default Product
+
+Product.contextType = {
+    currency:PropTypes.string,
+}
+
+
+
 
