@@ -1,4 +1,4 @@
-import { CURRENCY_CHANGED } from './actions'
+import { CURRENCY_CHANGED } from '../actions'
 
 const initialState ={
     currency: 'rupiah'
