@@ -14,4 +14,4 @@ export default function ProductListing ({ currency }) {
 
 ProductListing.propTypes = {
     currency: PropTypes.currency,
-}
+} 

@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { Ba sket } from './Basket'
+import { ProductListing } from './ProductListing'
 
 function mapStateProps (state) {
     return{
@@ -7,4 +7,4 @@ function mapStateProps (state) {
     }
 }
 
-export default connect(mapStateProps)(Basket)
+export default connect(mapStateProps)(ProductListing)
