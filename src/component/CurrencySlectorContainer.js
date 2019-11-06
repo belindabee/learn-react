@@ -1,5 +1,6 @@
 import { connect } from 'react-redux'
 import CurrencySelector from './CurrencySelector'
+import { currencyChanged } from './actions'
 
 function mapStateProps (state) {
     return{
@@ -13,4 +14,4 @@ function mapDispatchToProps (dispatch) {
     }
 }
 
-export default connect(mapStateProps)(CurrencySelector)
+export default connect(mapStateProps, mapDispatchToProps)(CurrencySelector)
