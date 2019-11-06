@@ -15,7 +15,10 @@ import Proptypes from 'prop-types'
 
     getChildContext () {
         return {
-            currency: this.state.currency
+            currency: this.state.currency,
+            setCurrency: (currency) => {
+                this.setState({currency})
+            }
         }
     }
 
@@ -36,4 +39,5 @@ export default Page
 
 Page.ChildContexType = {
     currency: Proptypes.string,
+    setCurrency: Proptypes.fuc
 }
